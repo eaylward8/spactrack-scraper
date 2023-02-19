@@ -7,7 +7,15 @@ URL = 'https://api.spactrack.net/spacs/query/1,5/options,commonSymbol,initialCom
 # If the script fails and the message provided is something like "Unauthorized" or "Log in again", follow these steps:
 #
 # 1. Go to https://spactrack.io/spacs/ in your browser
-# 2.
+# 2. Right-click anywhere on the page and choose "Inspect" to open the dev tools
+# 3. Click on the "Network" tab
+# 4. Refresh the page so all of the network requests happen again
+# 5. In the Filter text box, type "spacs/query"
+# 6. You should see a request with a name like "options,commonSymbol ..." - click on it
+# 7. In the request detail area, scroll down until you see "Request Headers"
+# 8. Find "authorization" and copy the value, which should start with "Bearer" followed by a long string of characters
+# 9. Replace the value below with the one you copied. Ensure that the entire thing is surrounded by single quotes.
+# 10. It should look like: 'Bearer <long string of characters>'
 HEADERS = {
   'Authorization': 'Bearer ZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmhZMk5sYzNNaU9uc2lhWFJsY21GMGFXOXVJam9pYzNWaWMyVnhkV1Z1ZENJc0luTmxZM0psZENJNklsNXdRV28wVGtKWlpWWlJRWEl5U0NaMU1uRnROeW9tUkU1MFhpUmxKVFI0YVdGbWFWb2taV3BFVkZkQmFVMWlkR3h6SW4wc0luTmpiM0JsY3lJNld5SjNZWFJqYUd4cGMzUXZiRzloWkNJc0luZGhkR05vYkdsemRDOTFjR1JoZEdVaUxDSnpjR0ZqY3k5eGRXVnllU0lzSW5Od1lXTnpMMkZrZG1GdVkyVmtVWFZsY25raUxDSnpjR0ZqY3k5elpXRnlZMmdpTENKemNHRmpjeTlrWlhSaGFXd2lMQ0oxYzJWeUwzSmxabkpsYzJoVWIydGxiaUpkTENKcFlYUWlPakUyTnpZNE5EQTJOVElzSW1WNGNDSTZNVFkzTmpreU56QTFNaXdpWVhWa0lqcGJJa0ZWUkVsRlRrTkZYMVZUUlZJaVhTd2lhWE56SWpvaVJrbE9WRkpCUTBzaUxDSnpkV0lpT2lKMWMyVnlRR052YlcxdmJtWnBMbU52YlNKOS5aVGY2WU5nRjVra0Y2bDg3eGtOTDVYU3lDSnVsTEZMR0JON1JITk1LaG5V'
 }
